@@ -1,7 +1,8 @@
+import Layout from './views/layout/layout'
 function App() {
 	return (
 		<>
-			<button>hello</button>
+			<Layout />
 		</>
 	)
 }
