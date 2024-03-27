@@ -1,10 +1,8 @@
-import Layout from './views/layout/layout'
+import routes from '../src/router/router'
+import { useRoutes } from 'react-router-dom'
 function App() {
-	return (
-		<>
-			<Layout />
-		</>
-	)
+	const element = useRoutes(routes)
+	return <>{element}</>
 }
 
 export default App

@@ -1,3 +1,7 @@
-import { useEffect } from "react";
+import React from 'react'
 
-useEffect
+export default function home() {
+  return (
+    <div>home</div>
+  )
+}

@@ -10,6 +10,7 @@ import Rolist from '../views/newssandbox/rolelist/rolist'
 import Userlist from '../views/newssandbox/userlist/userlist'
 import NotFound from '../views/404/404'
 import Catagory from '../views/newssandbox/catagory/catagory'
+import NewsSandbox from '../views/newssandbox/newssandbox'
 
 // 定义懒加载组件 先获取组件
 // const Layout = lazy(() => import('../views/Layout/Layout.jsx'))
@@ -24,38 +25,42 @@ export default [
 		path: '/login', //login
 		element: <Login />,
 	},
+	{
+		path: '/news', //全球大新闻(游客访问)
+		element: <News />,
+	},
+	{
+		path: '/layout', //全球大新闻(游客访问)
+		element: <Layout />,
+	},
 
 	{
-		path: '/layout', //layout
-		element: <Layout />,
+		path: '/newssandbox', //新闻沙箱
+		element: <NewsSandbox />,
 		children: [
 			{
-				path: 'News', //全球大新闻（游客访问）
-				element: <News />,
-			},
-			{
-				path: 'Draft', //草稿箱
+				path: 'draft', //草稿箱
 				element: <Draft />,
 			},
 
 			{
-				path: 'Home', //home
+				path: 'home', //home
 				element: <Home />,
 			},
 			{
-				path: 'Permissionslist', //权限列表
+				path: 'permissionslist', //权限列表
 				element: <Permissionslist />,
 			},
 			{
-				path: 'Rolelist', //角色列表
+				path: 'rolelist', //角色列表
 				element: <Rolist />,
 			},
 			{
-				path: 'Userlist', //用户列表
+				path: 'userlist', //用户列表
 				element: <Userlist />,
 			},
 			{
-				path: 'Catagory', //分类组件
+				path: 'catagory', //分类组件
 				element: <Catagory />,
 			},
 			//嵌套路由 结束 -------
